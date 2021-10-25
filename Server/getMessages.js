@@ -9,7 +9,7 @@ const getAllMessages  = async (room) => {
 
     const params = {
       TableName: "messages",
-      KeyExpression: "id < :i And room = :r",
+      FilterExpression: "id < :i And room = :r",
       ExpressionAttributeValues: {
         ":i": {
           N: time_now
